@@ -4,11 +4,12 @@ FROM amazonlinux:latest
 
 RUN yum update && \
     yum install -y software-properties-common build-essential python3-pip  nano && \
-    yum clean
+    yum clean all
 
 COPY . .
 
-RUN pip3 install --upgrade pip
+#RUN pip3 install --upgrade pip
+RUN setupenv.sh
 RUN pip3 install -r requirements.txt
 EXPOSE 8050
 

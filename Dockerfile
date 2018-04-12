@@ -3,14 +3,14 @@
 FROM amazonlinux:latest
 
 RUN yum update && \
-    yum install -y software-properties-common build-essential python3-pip  nano && \
+    yum install -y software-properties-common build-essential python35 python35-virtualenv python35-pip  nano && \
     yum clean all
 
 COPY . .
 
 #RUN pip3 install --upgrade pip
-RUN setupenv.sh
-RUN pip3 install -r requirements.txt
+CMD sh setupenv.sh
+CMD pip3 install -r requirements.txt
 EXPOSE 8050
 
 #CMD ["bash"]

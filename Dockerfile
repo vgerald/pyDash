@@ -8,9 +8,9 @@ RUN yum update && \
 
 COPY . .
 
-#RUN pip3 install --upgrade pip
-CMD sh setupenv.sh
-CMD pip3 install -r requirements.txt
+RUN python35 -m pip install --upgrade pip
+#CMD sh setupenv.sh
+CMD pip install -r requirements.txt
 EXPOSE 8050
 
 #CMD ["bash"]

@@ -1,7 +1,9 @@
 # sudo yum git
 # git clone https://github.com/vgerald/pyDash.git
 
+sudo yum update
 yum install python35 python35-virtualenv python35-pip
+yum install nginx
 #pip install --user pipenv
 #export VIRTUALENVWRAPPER_PYTHON=/usr/bin/python3
 #mkdir testDash

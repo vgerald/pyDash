@@ -1,4 +1,6 @@
 #docker build -t dash3 .
+#  sudo docker build -t dash3 .
+
 
 FROM amazonlinux:latest
 
@@ -19,3 +21,5 @@ CMD gunicorn -w 10 -b 0.0.0.0:8050 -t 100000 --max-requests 20 app:server
 CMD ["python3", "app.py"]
 
 #docker run -it --name dash3 -p 8050:8050 dash3
+# sudo docker run -it --name dashgv -p 8030:8030 amazonlinux
+

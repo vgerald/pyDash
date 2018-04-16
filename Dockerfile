@@ -16,7 +16,7 @@ EXPOSE 8050
 #CMD ["bash"]
 CMD gunicorn -w 10 -b 0.0.0.0:8050 -t 100000 --max-requests 20 app:server
 CMD ["source", "testDash/bin/activate"]
-CMD ["python", "app.py"]
+#CMD ["python", "app.py"]
 
 #sudo docker run -it --name mydash -p 8050:8050 mydash
 

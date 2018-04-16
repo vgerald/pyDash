@@ -5,7 +5,9 @@ import dash_html_components as html
 from flask import Flask
 
 server = Flask(__name__)
-app = dash.Dash(name='app1', sharing=True, server=server, csrf_protect=False)
+#app = dash.Dash(name='app1', sharing=True, server=server, csrf_protect=False)
+app = dash.Dash(name = __name__, sharing=True, server=server, csrf_protect=False)
+app.config.supress_callback_exceptions = True
 
 app.layout = html.Div(children=[
     html.H1(children='Hello Dash'),

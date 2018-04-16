@@ -10,5 +10,5 @@ sudo usermod -a -G docker ec2-user
 # log out and log in to pickup the added group
 
 # Also install some common sense stuff
-sudo yum install -y git
-sudo yum -y groupinstall "Development Tools"
+#sudo yum install -y git
+#sudo yum -y groupinstall "Development Tools"
